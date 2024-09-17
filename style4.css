@@ -1,0 +1,10 @@
+.rounded-corner-element {
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Content is clipped at the border of the element's box */
+    background-color: lightblue; /* Just for visibility */
+    padding: 20px; /* Add some padding for better visualization */
+    width: 200px; /* Set width for demonstration */
+   background-image: radial-gradient(circle, #ff7e5f, #feb47b);
+    
+    
+}

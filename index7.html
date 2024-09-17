@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Random 3 P Elements</title>
+    <style>
+        /* Agar aapko koi specific styling chahiye, to yahan add karein */
+    </style>
+</head>
+
+<body>
+
+    <!-- Sample p elements -->
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <p>This is paragraph 4.</p>
+    <p>This is paragraph 5.</p>
+
+    <!-- Button to trigger hiding of random p elements -->
+    <button onclick="hideRandomParagraphs()">Hide Random 3 Paragraphs</button>
+
+    <script>
+        function hideRandomParagraphs() {
+            // Selecting all p elements
+            var paragraphs = document.getElementsByTagName("p");
+
+            // Generating an array of indices for paragraphs
+            var indices = [];
+            for (var i = 0; i < paragraphs.length; i++) {
+                indices.push(i);
+            }
+
+            // Shuffling the indices array
+            indices.sort(function () { return 0.5 - Math.random() });
+
+            // Hiding the first 3 shuffled paragraphs
+            for (var j = 0; j < 3; j++) {
+                paragraphs[indices[j]].style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
